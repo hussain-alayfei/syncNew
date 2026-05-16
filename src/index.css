@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f5fbf6;
+  --color-on-background: #171d1a;
+
+  --color-surface: #f5fbf6;
+  --color-surface-dim: #d6dbd7;
+  --color-surface-bright: #f5fbf6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff5f0;
+  --color-surface-container: #eaefeb;
+  --color-surface-container-high: #e4eae5;
+  --color-surface-container-highest: #dee4df;
+  
+  --color-on-surface: #171d1a;
+  --color-on-surface-variant: #3d4944;
+
+  --color-inverse-surface: #2c322f;
+  --color-inverse-on-surface: #edf2ed;
+
+  --color-outline: #6d7a74;
+  --color-outline-variant: #bccac2;
+
+  --color-surface-tint: #006c53;
+  
+  --color-primary: #006c53;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #29a482;
+  --color-on-primary-container: #003225;
+  --color-inverse-primary: #69dab5;
+
+  --color-secondary: #545a8e;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #bdc2fd;
+  --color-on-secondary-container: #484e82;
+
+  --color-tertiary: #55615e;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #889592;
+  --color-on-tertiary-container: #222d2b;
+  
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* Custom Fixed Colors from Theme */
+  --color-primary-fixed: #87f7d0;
+  --color-primary-fixed-dim: #69dab5;
+  --color-on-primary-fixed: #002117;
+  --color-on-primary-fixed-variant: #00513e;
+
+  --color-secondary-fixed: #dfe0ff;
+  --color-secondary-fixed-dim: #bdc2fd;
+  --color-on-secondary-fixed: #101647;
+  --color-on-secondary-fixed-variant: #3d4375;
+
+  --color-tertiary-fixed: #d8e5e1;
+  --color-tertiary-fixed-dim: #bcc9c6;
+  --color-on-tertiary-fixed: #121e1c;
+  --color-on-tertiary-fixed-variant: #3d4947;
+
+  /* Semantic Status Colors */
+  --color-waste-alert: #ff5252;
+  --color-status-active: #29a482;
+
+  --font-sans: "Almarai", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-sans antialiased selection:bg-primary-container selection:text-on-primary-container;
+  }
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
